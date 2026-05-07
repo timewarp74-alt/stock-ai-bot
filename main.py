@@ -1,6 +1,6 @@
 import os
 import time
-import asyncio
+
 
 import pandas as pd
 import feedparser
@@ -93,12 +93,10 @@ def send_watchlist_news():
 🔗 {first_news['link']}
 """
 
-        asyncio.run(
-            bot.send_message(
-                chat_id=CHAT_ID,
-                text=message
-            )
-        )
+    bot.send_message(
+    chat_id=CHAT_ID,
+    text=message
+)
 
         time.sleep(3)
 
