@@ -64,7 +64,6 @@ def summarize_news(text):
 
     # return response.choices[0].message.content
 
-
 def send_watchlist_news():
 
     for _, row in watchlist.iterrows():
@@ -93,12 +92,13 @@ def send_watchlist_news():
 🔗 {first_news['link']}
 """
 
-    bot.send_message(
-    chat_id=CHAT_ID,
-    text=message
-)
+        bot.send_message(
+            chat_id=CHAT_ID,
+            text=message
+        )
 
         time.sleep(3)
+
 
 
 schedule.every(1).hours.do(
